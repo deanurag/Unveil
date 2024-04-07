@@ -1,81 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-:root {
-  --height: 30px;
-  --speed: 30s;
-}
-* {
-  margin: 0;
+*body {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.ticker-tape {
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  overflow: hidden;
-  height: var(--height);
-  padding-left: 100%;
+.menus {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in;
 }
 
-.ticker-tape .ticker {
-  height: var(--height);
-  line-height: var(--height);
-  white-space: nowrap;
-  padding-right: 100%;
-
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-name: ticker;
-  -webkit-animation-duration: var(--speed);
-
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: ticker;
-  animation-duration: var(--speed);
+.hamburger.closebtn .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
 }
-
-.ticker-tape .ticker-item {
-  display: inline-block;
-  padding: 0.2rem;
-  font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 1rem;
-  color: rgba(0, 0, 0, 0.2);
+.hamburger.closebtn .line-2 {
+  opacity: 0;
 }
-
-@-webkit-keyframes ticker {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes ticker {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
+.hamburger.closebtn .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
 }

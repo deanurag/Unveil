@@ -1,1 +1,11 @@
-Add new readme file ..... after few times...
+Technologies Used
+
+- [React]
+- [Tailwind CSS]
+- [Vite]
+
+Getting Started
+
+- [Clone the repository.]
+- [Install dependencies: npm install.]
+- [Run the development server: npm run dev.]
