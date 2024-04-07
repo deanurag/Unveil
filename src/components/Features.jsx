@@ -5,10 +5,10 @@ const Features = () => {
     <section id="features">
       <div class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row">
         <div class="flex flex-col space-y-12 md:w-1/2">
-          <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
+          <h2 class="max-w-md text-4xl font-serif font-bold text-center md:text-left">
             What's different about Unveil?
           </h2>
-          <p class="max-w-sm text-center text-darkGrayishBlue md:text-left">
+          <p class="max-w-sm text-center font-serif font-semibold text-darkGrayishBlue md:text-left">
             What sets Unveil apart is its commitment to simplifying the
             complexities of the Indian stock market for beginner investors
             through intuitive tools.
@@ -16,6 +16,7 @@ const Features = () => {
         </div>
 
         <div className="md:w-1/2">
+          <h2 className="font-bold font-serif text-4xl mb-8">Prospects</h2>
           <div className="item flex flex-col space-x-4 mb-8 md:flex-row">
             <div className="heading">
               <div className="bg-brightRedSupLight rounded-l-full md:bg-transparent">
@@ -24,7 +25,7 @@ const Features = () => {
                     01
                   </div>
                   <h3 className="font-bold text-xl md:hidden">
-                    Track company-wide progress
+                    Simplified Financial Summaries
                   </h3>
                 </div>
               </div>
@@ -32,13 +33,14 @@ const Features = () => {
 
             <div className="">
               <h3 className="font-bold hidden md:block py-2 mb-2">
-                Track company-wide progress
+                Simplified Financial Summaries
               </h3>
-              <p className="text-darkGrayishBlue">
-                See how your day-to-day tasks fit into the wider vision. Go from
-                tracking progress at the milestone level all the way down to the
-                smallest of details. Never lose sight of the bigger picture
-                again.
+              <p className=" text-darkGrayishBlue">
+                Unveil simplifies financial summaries, empowering novice
+                investors with easy-to-understand insights into company
+                finances. By distilling complex data into digestible formats,
+                Unveil ensures users grasp essential concepts without
+                overwhelming technical details.
               </p>
             </div>
 
@@ -54,7 +56,7 @@ const Features = () => {
                     02
                   </div>
                   <h3 className="font-bold text-xl md:hidden">
-                    Advanced built-in reports
+                    Interactive Learning Tools
                   </h3>
                 </div>
               </div>
@@ -62,12 +64,13 @@ const Features = () => {
 
             <div className="">
               <h3 className="font-bold hidden md:block py-2 mb-2">
-                Advanced built-in reports
+                Interactive Learning Tools
               </h3>
               <p className="text-darkGrayishBlue">
-                Set internal delivery estimates and track progress toward
-                company goals. Our customisable dashboard helps you build out
-                the reports you need to keep key stakeholders informed.
+                Interactive learning tools, including tutorials, videos, and
+                quizzes, guiding novice investors through the complexities of
+                the Indian stock market. Users learn at their own pace, gaining
+                confidence and making informed investment decisions.
               </p>
             </div>
 
@@ -84,7 +87,7 @@ const Features = () => {
                     03
                   </div>
                   <h3 className="font-bold text-xl md:hidden">
-                    Everything you need in one place
+                    Customized Investment Strategies
                   </h3>
                 </div>
               </div>
@@ -92,12 +95,13 @@ const Features = () => {
 
             <div className="">
               <h3 className="font-bold hidden md:block py-2 mb-2">
-                Everything you need in one place
+                Customized Investment Strategies
               </h3>
               <p className="text-darkGrayishBlue">
-                Stop jumping from one service to another to communicate, store
-                files, track tasks and share documents. Manage offers an
-                all-in-one team productivity solution.
+                Unveil delivers personalized investment strategies, analyzing
+                user risk tolerance, financial goals, and market preferences.
+                Using advanced algorithms, it provides actionable insights to
+                build diversified portfolios, meeting individual aspirations.
               </p>
             </div>
 

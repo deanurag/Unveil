@@ -112,7 +112,7 @@ const Hero = () => {
           <h1 className="text-4xl font-bold max-w-md  text-center md:text-left md:text-5xl">
             Uncovering the story behind the stock
           </h1>
-          <p className="text-center max-w-sm text-darkGrayishBlue md:text-left">
+          <p className="text-center max-w-sm font-sans font-semibold text-darkGrayishBlue md:text-left">
             "Unveil" in this context suggests the action of revealing or
             bringing to light the hidden or underlying narrative associated with
             a particular stock.
@@ -133,6 +133,7 @@ const Hero = () => {
         </div>
       </div>
       <form
+        id="Search"
         onSubmit={handleSubmit}
         className="flex flex-row justify-center items-center"
       >
