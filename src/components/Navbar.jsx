@@ -8,8 +8,14 @@ const Navbar = () => {
     setOpenMenu((prev) => !prev);
   };
 
+  // let offsetTop = document.getElementById("yourelement").offsetTop;
+  // window.scrollTo({
+  //   top: offsetTop - 100,
+  //   behavior: "smooth",
+  // });
+
   return (
-    <div className="navbar bg-base-100">
+    <div id="navbar" className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -33,13 +39,15 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Homepage</a>
+              <a href="#navbar" className=" ease-in-out duration-700">
+                Hompage
+              </a>
             </li>
             <li>
-              <a>Portfolio</a>
+              <a href="#Search">Search</a>
             </li>
             <li>
-              <a>About</a>
+              <a href="#footer">About</a>
             </li>
           </ul>
         </div>

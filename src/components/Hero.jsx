@@ -139,16 +139,23 @@ const Hero = () => {
           <h1 className="text-4xl font-bold max-w-md  text-center md:text-left md:text-5xl">
             Uncovering the story behind the stock
           </h1>
-          <p className="text-center max-w-sm text-darkGrayishBlue md:text-left">
-            "Unveil" in this context suggests the action of revealing or bringing to light the
-            hidden or underlying narrative associated with a particular stock.
+          <p className="text-center max-w-sm font-sans font-semibold text-darkGrayishBlue md:text-left">
+            "Unveil" in this context suggests the action of revealing or
+            bringing to light the hidden or underlying narrative associated with
+            a particular stock.
           </p>
         </div>
         <div className=" right md:w-1/2">
           <img src={illustration} alt="illustration" />
         </div>
       </div>
-      <form className="flex flex-col py-12 justify-center items-center">
+
+      {/* <div className="collapse-title text-xl font-medium"></div> */}
+      <form
+        id="Search"
+        onSubmit={handleSubmit}
+        className="flex flex-col py-12 justify-center items-center "
+      >
         <select
           onChange={handleChange}
           value={ticker}

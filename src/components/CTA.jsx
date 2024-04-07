@@ -2,10 +2,10 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <section id="cta" className="bg-brightRed mt-4 md:mt-16">
+    <section id="cta" className="bg-brightRed mt-4 md:mt-16 ">
       <div className="container mx-auto p-6 ">
-        <div className="flex flex-col md:justify-between items-center space-y-8 py-8 md:flex-row">
-          <div className="md:max-w-xl">
+        <div className="flex flex-col md:justify-between space-y-8 py-8 md:flex-row">
+          <div className="md:max-w-5xl">
             <h1 className="text-white font-bold text-3xl text-center ">
               Empowering novice investors in the Indian stock market with
               user-friendly tools
