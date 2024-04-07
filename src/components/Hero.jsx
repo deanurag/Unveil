@@ -113,9 +113,8 @@ const Hero = () => {
             Uncovering the story behind the stock
           </h1>
           <p className="text-center max-w-sm text-darkGrayishBlue md:text-left">
-            "Unveil" in this context suggests the action of revealing or
-            bringing to light the hidden or underlying narrative associated with
-            a particular stock.
+            "Unveil" in this context suggests the action of revealing or bringing to light the
+            hidden or underlying narrative associated with a particular stock.
           </p>
 
           {/* <div className="flex justify-center md:justify-start">
@@ -132,48 +131,53 @@ const Hero = () => {
           <img src={illustration} alt="illustration" />
         </div>
       </div>
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-row justify-center items-center"
-      >
-        <select
-          onChange={handleChange}
-          value={ticker}
-          className="select select-info w-full max-w-xl"
+      
+        {/* <div className="collapse-title text-xl font-medium"></div> */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col py-12 justify-center items-center "
         >
-          <option disabled selected>
-            Stock Options
-          </option>
-          {json.map((item, i) => (
-            <option key={i} value={item.Symbol}>
-              {item.Company}
+          <select
+            onChange={handleChange}
+            value={ticker}
+            className="select select-info w-full max-w-xl"
+          >
+            <option disabled selected>
+              Stock Options
             </option>
-          ))}
-          {/* <option>English</option>
+            {json.map((item, i) => (
+              <option key={i} value={item.Symbol}>
+                {item.Company}
+              </option>
+            ))}
+            {/* <option>English</option>
           <option>Japanese</option>
           <option>Italian</option> */}
-        </select>
-        <button
-          type="submit"
-          value="submit"
-          className="btn btn-ghost btn-circle"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </button>
-      </form>
+          </select>
+          <div className="collapse bg-base-200 my-6">
+          <input type="checkbox" />
+          <button type="submit" value="submit" className="btn btn-ghost btn-circle collapse-title ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+          <div className="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+        </form>
+
     </>
   );
 };
