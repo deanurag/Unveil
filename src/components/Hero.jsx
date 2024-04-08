@@ -212,7 +212,7 @@ const Hero = () => {
           <input type="checkbox" />
           <div className="collapse-content">
           {summary ? <Markdown>{summary}</Markdown> : <p>No summary available</p>}
-          <div className="flex align-items-center justify-center py-6 gap-5 w-[90%]">
+          <div className=" mx-auto md:flex-row grid grid-cols-auto md:flex align-items-center justify-center py-6 gap-5 w-[90%]">
               {cardData.map((item, i) => (
                   <Card key={i} card={item} />
               ))}
