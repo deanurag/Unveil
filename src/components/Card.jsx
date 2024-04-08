@@ -7,8 +7,8 @@ function Card ({ card }) {
         <div className="card-body">
           <h2 className="card-title">{card.title}</h2>
           <div className="card-actions justify-center">
-            <a href={card.url}>
-              <button className="btn btn-primary">Visit Now</button>
+            <a href={card.url} target="_blank">
+              <div className="btn btn-primary" >Visit Now</div>
             </a>
           </div>
         </div>

@@ -105,6 +105,7 @@ const Hero = () => {
   };
 
   const handleSubmit = async () => {
+    if (ticker === "") return;
     setLoading(true);
     try {
       const response = await fetch(`https://unveil-backend.onrender.com/summary/${ticker}`);
@@ -113,7 +114,7 @@ const Hero = () => {
       }
       const data = await response.text();
       const cleanedData = data.replace(/^"(.*)"$/, '$1');
-      //console.log(cleanedData);
+      console.log(cleanedData);
       setSummary(unraw(cleanedData));
     } catch (error) {
       console.error(error);
@@ -124,7 +125,7 @@ const Hero = () => {
         throw new Error("Failed to fetch summary");
       }
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       setcardData(data);
     } catch (error) {
       console.error(error);
@@ -162,7 +163,7 @@ const Hero = () => {
           className="select select-info w-full max-w-xl"
           disabled={loading}
         >
-          <option disabled selected>
+          <option selected value="">
             Stock Options
           </option>
           {json.map((item, i) => (
@@ -208,17 +209,24 @@ const Hero = () => {
             </svg>
           )}
         </button>
-        <div className="collapse bg-base-200 my-6">
-          <input type="checkbox" />
-          <div className="collapse-content">
-          {summary ? <Markdown>{summary}</Markdown> : <p>No summary available</p>}
-          <div className="flex align-items-center justify-center py-6 gap-5 w-[90%]">
+          {loading ?
+          <div className="flex flex-col gap-4 w-52">
+          <div className="skeleton h-32 w-full"></div>
+          <div className="skeleton h-4 w-28"></div>
+          <div className="skeleton h-4 w-full"></div>
+          <div className="skeleton h-4 w-full"></div>
+        </div> : <div className=" bg-base-200 my-6 w-full">
+          {/* <input type="checkbox" /> */}
+          <div >
+          {summary && <Markdown className="m-6 text-white">{summary}</Markdown> }
+          <div className="flex align-items-center justify-center py-6 gap-5  m-6">
               {cardData.map((item, i) => (
                   <Card key={i} card={item} />
               ))}
           </div>
           </div>
         </div>
+        }
       </form>
     </>
   );
