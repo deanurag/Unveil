@@ -13,7 +13,6 @@ function Card ({ card }) {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 export default Card;
