@@ -219,7 +219,7 @@ const Hero = () => {
           {/* <input type="checkbox" /> */}
           <div >
           {summary && <Markdown className="m-6 text-white">{summary}</Markdown> }
-          <div className="flex align-items-center justify-center py-6 gap-5  m-6">
+          <div className=" mx-auto md:flex-row grid grid-cols-auto md:flex align-items-center justify-center py-6 gap-5 w-[90%]">
               {cardData.map((item, i) => (
                   <Card key={i} card={item} />
               ))}
